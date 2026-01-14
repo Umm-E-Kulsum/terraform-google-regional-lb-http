@@ -19,11 +19,13 @@ import (
 
 	"net/http"
 
+	"github.com/GoogleCloudPlatform/cloud-foundation-toolkit/infra/blueprint-test/pkg/tft"
 	"github.com/GoogleCloudPlatform/cloud-foundation-toolkit/infra/blueprint-test/pkg/utils"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestInternalLbCloudRun(t *testing.T) {
+	bpt := tft.NewTFBlueprintTest(t)
 
 	bpt.DefineVerify(func(assert *assert.Assertions) {
 
